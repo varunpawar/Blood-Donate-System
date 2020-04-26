@@ -1,0 +1,204 @@
+ 
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+<link href="header.html" rel="import" />
+
+<head>
+
+  <style>
+
+    .hm-gradient {
+background: #FFEFBA;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+    .divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.divider-text span {
+    padding: 7px;
+    font-size: 12px;
+    position: relative;   
+    z-index: 2;
+}
+.divider-text:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    top: 55%;
+    left: 0;
+    z-index: 1;
+}
+
+</style>
+</head>
+<body class="hm-gradient">
+
+<div class="container">
+<br>  <p class="text-center">Update Your Profile</p>
+<hr>
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 400px;">
+	<h4 class="card-title mt-3 text-center">Your Profile</h4>
+
+	<p class="divider-text">
+    </p>
+<form action="/profile" method="POST" autocomplete="off">
+  <!-- form-group// -->
+	<div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fas fa-user"></i></span>
+		 </div>
+        <input name="name" id="name" value="{{list.name}}" class="form-control" type="text" disabled>
+    </div> 
+    
+    <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fas fa-address-card"></i> </span>
+		 </div>
+        <input type="text" name="address" id="address" value="{{list.address}}" class="form-control" disabled>
+    </div> 
+    <!-- form-group// -->
+    
+    <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fas fa-mobile-alt"></i> </span>
+		 </div>
+        <input type="text" name="mobile" id="mobile" value="{{list.mobile}}" class="form-control" disabled>
+    </div> 
+    <!-- form-group// -->
+ 
+ 
+     
+    
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fas fa-tint"></i>
+		</div>
+		<select class="form-control"  id="blood" name="blood" value="{{list.blood}}" disabled>
+			<option></option>>Select your Blood Group </option>
+			<option>A+</option>
+      			<option>A+</option>
+
+			<option>B+</option>
+      <option>B-</option>
+//form action nikal
+      <option>AB+</option>
+        <option>AB+</option>
+
+      <option>O+</option>
+      <option>O-</option>
+
+
+		</select>
+	</div>
+   
+      <div class="form-group input-group">
+
+        <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block" onclick="f1()"> Update </button>
+    </div> <!-- form-group// -->    
+                                                       
+</form>
+</article>
+</div> <!-- card.// -->
+
+</div> 
+<!--container end.//-->
+
+<br><br>
+<article class="bg-secondary mb-0">  
+<div class="card-body text-center">
+<h3 class="text-white mt-3">BLOOD DONOR SYSTEM</h3>
+<p class="h5 text-white">Let's make a change</p>   <br>
+<p><a class="btn btn-warning" >Donate Blood 
+ <i class="fa fa-window-restore "></i></a></p>
+
+<script>
+
+    function f1(){
+      document.getElementById('name').disabled=false;
+      document.getElementById('address').disabled=false;
+      document.getElementById('mobile').disabled=false;
+      document.getElementById('blood').disabled=false;
+
+    }
+     
+  </script>
+<!--
+<html>
+ 
+<body>
+
+  <form  action="/seeker" method="POST">
+       
+     <p>Hospital Name:</p>
+    <input type="text" name="hname" value="">
+     <p>Hospital Reg No:</p>
+    <input type="text" name="regno" value="">
+     <p>BloodGroup Required</p>
+    <input type="text" name="blood" value="">
+     <p>Patient Name:</p>
+    <input type="text" name="pname" value="">
+     <p>Age:</p>
+    <input type="text" name="age" value="">
+      <p>Reason:</p>
+    <input type="text" name="reason" value="">
+                                                  
+  <center><button type="submit">Submit</button></center><br>
+  
+  </form>
+ 
+</body>
+</html> 
+-->
+
+<!--
+ <html>
+<head><title></title></head>
+
+
+     <body>
+     
+<form action="/profile" method="POST" autocomplete="off">
+ 
+     Name:<input type="text" value="{{list.name}}" name="name" id="name" disabled>
+     <br>
+     Email:{{list.email}}<br>
+       Address:<input type="text" value="{{list.address}}" name="address" id="address" disabled> <br>
+     Mobile:<input type="text" value="{{list.mobile}}" name="mobile" id="mobile" disabled> <br>
+       BloodGroup:<input type="text" value="{{list.blood}}" name="blood" id="blood" disabled><br>
+       <button type="button" onclick="f1()">Update</button><br>
+       <button type="submit">Add</button>
+    
+ </form>
+      
+  <script>
+
+    function f1(){
+      document.getElementById('name').disabled=false;
+      document.getElementById('address').disabled=false;
+      document.getElementById('mobile').disabled=false;
+      document.getElementById('blood').disabled=false;
+
+    }
+     
+  </script>
+    
+   
+        
+ </body>
+ </html>
+ -->

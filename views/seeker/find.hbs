@@ -1,0 +1,208 @@
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+<link href="header.html" rel="import" />
+
+<head>
+
+  <style>
+    .divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.divider-text span {
+    padding: 7px;
+    font-size: 12px;
+    position: relative;   
+    z-index: 2;
+}
+.divider-text:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    top: 55%;
+    left: 0;
+    z-index: 1;
+}
+.darken-grey-text {
+    color: #2E2E2E;
+}
+
+    .hm-gradient {
+background: #FFEFBA;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+    
+
+.navbar .dropdown-menu a:hover {
+    color: #616161 !important;
+}
+.darken-grey-text {
+    color: #2E2E2E;
+}
+</style>
+</head>
+<body class="hm-gradient">
+
+<div class="container mt-4">
+
+  <nav class="mb-4 navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand font-bold" href="#">Blood Donor System</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/login"><i class="fa fa-gear"></i>Donator Login<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="seeker"><i class="fa fa-gear"></i> Seeker Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/adminlogin"><i class="fa fa-gear"></i> Admin Login</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="/compaign"><i class="fas fa-lightbulb"></i> campaign</a>
+                        </li>
+                      
+                    </ul>
+                </div>
+            </nav>
+            <!--/.Navbar -->
+
+<br>  <p class="text-center">Blood Donor System</p>
+<hr>
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 400px;">
+	<h4 class="card-title mt-3 text-center">Seeker</h4>
+	<p class="text-center">Enter data to help us to search</p>
+
+	<p class="divider-text">
+    </p>
+  <form  action="/seeker" method="POST">
+  <!-- form-group// -->
+	<div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fas fa-hospital"></i> </span>
+		 </div>
+        <input name="hname" value="" class="form-control" placeholder="Enter Hospital name" type="text">
+    </div> 
+    
+    <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fas fa-pencil-alt"></i> </span>
+		 </div>
+        <input type="text" name="regno" value="" class="form-control" placeholder="Hospital Registeration Number">
+    </div> 
+    <!-- form-group// -->
+ 
+    <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fas fa-user"></i> </span>
+		</div>
+	
+    	<input input type="text" name="blood" value="" class="form-control" placeholder="Enter Name">
+    </div> 
+     
+    
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fas fa-tint"></i>
+		</div>
+		<select class="form-control"   name="blood" value="">
+			<option></option>>Select your Blood Group </option>
+			<option>A+</option>
+      			<option>A+</option>
+
+			<option>B+</option>
+      <option>B-</option>
+//form action nikal
+      <option>AB+</option>
+        <option>AB+</option>
+
+      <option>O+</option>
+      <option>O-</option>
+
+
+		</select>
+	</div>
+   
+      <div class="form-group input-group">
+
+  	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-child"></i> </span>
+		 </div>
+        <input type="text" name="age" value="" class="form-control" placeholder="Age">
+    </div> 
+  <!-- form-group// -->  
+    <div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fas fa-address-card"></i> </span>
+		 </div>
+        <input type="text" name="reason" value="" class="form-control" placeholder="Reason" type="text">
+    </div>
+    
+            
+        <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block"> Find Donator </button>
+    </div> <!-- form-group// -->    
+                                                       
+</form>
+</article>
+</div> <!-- card.// -->
+
+</div> 
+<!--container end.//-->
+
+<br><br>
+<article class="bg-secondary mb-3">  
+<div class="card-body text-center">
+    <h3 class="text-white mt-3">BLOOD DONOR SYSTEM</h3>
+<p class="h5 text-white">Let's make a change</p>   <br>
+<p><a class="btn btn-warning" >Donate Blood 
+ <i class="fa fa-window-restore "></i></a></p>
+</div>
+</article>
+</body></div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
+<!--
+<br>
+
+<html>
+ 
+<body>
+
+  <form  action="/seeker" method="POST">
+       
+     <p>Hospital Name:</p>
+    <input type="text" name="hname" value="">
+     <p>Hospital Reg No:</p>
+    <input type="text" name="regno" value="">
+     <p>BloodGroup Required</p>
+    <input type="text" name="blood" value="">
+     <p>Patient Name:</p>
+    <input type="text" name="pname" value="">
+     <p>Age:</p>
+    <input type="text" name="age" value="">
+      <p>Reason:</p>
+    <input type="text" name="reason" value="">
+                                                  
+  <center><button type="submit">Submit</button></center><br>
+  
+  </form>
+ 
+</body>
+</html> 
+-->

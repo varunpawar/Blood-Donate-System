@@ -1,0 +1,136 @@
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+<link href="header.html" rel="import" />
+
+<head>
+
+  <style>
+
+    .hm-gradient {
+background: #FFEFBA;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+    .divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.divider-text span {
+    padding: 7px;
+    font-size: 12px;
+    position: relative;   
+    z-index: 2;
+}
+.divider-text:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    top: 55%;
+    left: 0;
+    z-index: 1;
+}
+
+</style>
+</head>
+<body class="hm-gradient">
+
+
+
+
+
+<div class="container">
+<br>  <p class="text-center">Create Campaign</p>
+<hr>
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 400px;">
+	<h4 class="card-title mt-3 text-center">Help us by creating campaign</h4>
+	<p class="text-center">Please fill details</p>
+
+	<p class="divider-text">
+    </p>
+<form  action="/admin/create" method="POST">
+  <!-- form-group// -->
+	<div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fas fa-hospital"></i> </span>
+		 </div>
+        <input name="location" value="" class="form-control" placeholder="Enter Campaign location" type="text">
+    </div> 
+    
+    <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-calendar"></i> </span>
+		 </div>
+        <input type="date" name="datefrom" value="" class="form-control" placeholder="Starting Date">
+    </div> 
+    <!-- form-group// -->
+ 
+    <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-calendar"></i> </span>
+		</div>
+	
+    	<input input type="date" name="dateto" value="" class="form-control" placeholder="End Date">
+    </div> 
+     
+    
+    
+   
+      <div class="form-group input-group">
+
+  	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-child"></i> </span>
+		 </div>
+        <input type="text" name="helpline" value="" class="form-control" placeholder="Helpline">
+    </div> 
+ 
+    
+            
+        <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block"> Create Campaign </button>
+    </div> <!-- form-group// -->    
+                                                       
+</form>
+</article>
+</div> <!-- card.// -->
+
+</div> 
+<!--container end.//-->
+
+<br><br>
+<article class="bg-secondary mb-3">  
+<div class="card-body text-center">
+    <h3 class="text-white mt-3">BLOOD DONOR SYSTEM</h3>
+<p class="h5 text-white">Let's make a change</p>   <br>
+<p><a class="btn btn-warning" >Donate Blood 
+ <i class="fa fa-window-restore "></i></a></p>
+</div>
+</article>
+</body></div>
+
+<!--
+<h3> create campiagn</h3>
+
+<form  action="/admin/create" method="POST">
+	Location: <input type="text" name="location"></input>
+	Date From:  <input type="date" name="datefrom"></input>
+	Date To:  <input type="date" name="dateto"></input>
+	Helpline: <input type="text" name="helpline"></input>
+
+	<button type="submit">Create Compaign</button>
+
+
+</form>
+-->

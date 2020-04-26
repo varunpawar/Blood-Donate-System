@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Card</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<div class="text-center">
+
+
+
+    {{#each list}}
+<div class="card m-4 col-sm-3 text-center border border-primary">
+  <div class="card-header">
+{{this.name}}
+
+  </div>
+  <div class=" card-body">
+    <h5 class="card-title">{{this.email}}</h5>
+    <p class="card-text">{{this.address}}</p>
+  </div>
+  <div class="card-footer text-muted">
+    {{this.mobile}}
+  </div>
+</div>
+
+    
+
+
+ 
+
+ 
+    {{/each}}
+
+</div>
+</div>
+</div>
+
+

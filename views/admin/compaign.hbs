@@ -1,0 +1,68 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css
+">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+<!------ Include the above in your HEAD tag ---------->
+<style>
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css);
+
+
+.hm-gradient {
+background: #FFEFBA;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+</style>
+<body class="hm-gradient">
+
+<div class="container">
+<br>  <p class="text-center">All Compaigns</p>
+
+<div class="row justify-content-center"></div>
+<table class="table table-striped col-md table-dark">
+
+	<thead class="text-center">
+		<tr>
+			 <th scope="col">location</th>
+			 <th scope="col">datefrom</th>
+			 <th scope="col">dateto</th>
+			 <th scope="col">helpline</th>
+		</tr>
+
+	</thead>
+
+	<tbody>
+	{{#each list}}
+		
+<tr>
+			<td>{{this.location}}</td>
+			<td>{{this.datefrom}}</td>
+			<td>{{this.dateto}}</td>
+			<td>{{this.helpline}}</td>
+
+		</tr>
+
+
+		{{/each}}
+	</tbody>
+
+
+</table>
+
+</div>
+</div>
+<br>
+</body>
